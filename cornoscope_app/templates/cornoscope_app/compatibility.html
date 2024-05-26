@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatibility</title>
+</head>
+<body>
+    <h1>Compatibility List</h1>
+    <ul>
+        {% for compatibility in compatibilities %}
+        <li>{{ compatibility.sign1 }} and {{ compatibility.sign2 }} - Compatibility Score: {{ compatibility.compatibility_score }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
