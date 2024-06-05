@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ horoscope.sign }} Horoscope{% endblock %}
+
+{% block content %}
+<h1 class="text-center">{{ horoscope.sign }}</h1>
+<div class="card">
+   <img src="{% static 'images/' %}{{ horoscope.sign|lower }}.jpg" class="card-img-top" alt="{{ horoscope.sign }}">
+
+    <div class="card-body">
+        <p class="card-text">{{ horoscope.description }}</p>
+        <p class="card-text"><strong>Start Date:</strong> {{ horoscope.start_date }}</p>
+        <p class="card-text"><strong>End Date:</strong> {{ horoscope.end_date }}</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+    </div>
+</div>
+{% endblock %}
+

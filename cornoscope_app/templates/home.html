@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Choose Your Zodiac Sign{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Who are you</h2>
+<div class="row">
+    {% for horoscope in horoscopes %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <a href="{% url 'horoscope_detail' sign=horoscope.sign %}">
+                    <img src="{% static 'images/' %}{{ horoscope.sign|lower }}.jpg" class="card-img-top" alt="{{ horoscope.sign }}">
+                </a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ horoscope.sign }} guy</h5>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

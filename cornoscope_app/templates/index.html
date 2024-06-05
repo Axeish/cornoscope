@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Centered Button{% endblock %}
+
+{% block content %}
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        background-color: #009688; /* Aqua ocean blue-green teal color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .center-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .center-content h1 {
+        color: white; /* White text color */
+    }
+    .description {
+        color: white;
+        font-size: 1.3em; /* Slightly bigger font size */
+        margin-top: 10px;
+        font-style: italic; /* Italic text */
+    }
+    .custom-button {
+        background-color: #6a0dad; /* Purple background */
+        border-radius: 25px; /* Rounded sides */
+        padding: 15px 30px; /* Larger size */
+        color: white; /* Text color */
+        font-size: 1.25em; /* Larger text */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow drop */
+        border: none; /* Remove border */
+        margin-top: 20px; /* Space between text and button */
+    }
+    .custom-button:hover {
+        background-color: #7b1fa2; /* Slightly lighter purple on hover */
+        text-decoration: none; /* Remove underline from link */
+    }
+</style>
+<div class="center-content">
+    <h1>Cornoscope</h1>
+    <p class="description"><em>Discover astro men's traits while exploring astrology and relationships.</em></p>
+    <a href="{% url 'home' %}" class="btn custom-button">Click Me</a>
+</div>
+{% endblock %}

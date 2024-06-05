@@ -1,7 +1,10 @@
+from django.contrib import admin
 from django.urls import path
-from . import views
+from .views import HomePageView, HoroscopeDetailView, Index
 
 urlpatterns = [
-    path('', views.horoscope_view, name='horoscope'),
-    path('compatibility/', views.compatibility_view, name='compatibility'),
+    path('', Index.as_view(), name='index'),
+    path('home', HomePageView.as_view(), name='home'),
+    path('horoscope/<str:sign>/', HoroscopeDetailView.as_view(), name='horoscope_detail'),
+
 ]

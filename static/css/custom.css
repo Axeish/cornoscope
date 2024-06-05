@@ -1,0 +1,5 @@
+/* Custom CSS to control image size */
+.card-img-top {
+    max-width: 200px; /* Maximum width for the image */
+    max-height: 200px; /* Maximum height for the image */
+}
