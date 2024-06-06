@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Date of Birth and Gender</title>
+</head>
+<body>
+    <h1>Enter Your Date of Birth and Gender</h1>
+    <form action="{% url 'set_dob' %}" method="POST">
+        {% csrf_token %}
+        {{ dob_form.as_p }}
+        {{ gender_form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    {% if dob_form.errors %}
+    <div style="color: red;">
+        {{ dob_form.errors }}
+    </div>
+    {% endif %}
+    {% if gender_form.errors %}
+    <div style="color: red;">
+        {{ gender_form.errors }}
+    </div>
+    {% endif %}
+</body>
+</html>

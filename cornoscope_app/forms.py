@@ -13,3 +13,16 @@ GENDER_CHOICES = (
 class UploadXMLForm(forms.Form):
     xml_file = forms.FileField(label='Upload XML File', required=True)
 
+class DateOfBirthForm(forms.Form):
+    dob = forms.DateField(label='Date of Birth', input_formats=['%d/%m/%Y'], widget=forms.DateInput(format='%d/%m/%Y'))
+
+    def clean_dob(self):
+        dob = self.cleaned_data['dob']
+        today = date.today()
+        age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+        if age < 18:
+            raise ValidationError("You must be at least 18 years old to use this service.")
+        return dob
+
+class GenderForm(forms.Form):
+    gender = forms.ChoiceField(label='Gender', choices=GENDER_CHOICES, widget=forms.RadioSelect)

@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'cornoscope_app.middleware.check_dob_middleware.CheckDOBMiddleware'
 ]
 
 ROOT_URLCONF = 'cornoscope.urls'

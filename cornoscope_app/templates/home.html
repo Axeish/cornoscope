@@ -4,7 +4,13 @@
 {% block title %}Choose Your Zodiac Sign{% endblock %}
 
 {% block content %}
-<h2 class="text-center">Who are you</h2>
+<h2 class="text-center">Cornoscope</h2>
+<div class="center-content">
+    <h1>Welcome {{ horoscope }} {% if request.session.gender == '1' %}Guy{% elif request.session.gender == '2' %}Lady{% else %} {% endif %}</h1>
+    <p>Born on: {{ request.session.date_of_birth }}</p>
+<!--    <p>Your gender: {% if request.session.gender == '1' %}Gay Man{% elif request.session.gender == '2' %}Lesbian{% else %}Other{% endif %}</p>-->
+
+</div>
 <div class="row">
     {% for horoscope in horoscopes %}
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
