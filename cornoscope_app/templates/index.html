@@ -11,11 +11,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: #009688; /* Default ocean blue background */
+         /* Default ocean blue background */
         transition: background-color 0.3s ease; /* Smooth transition for color change */
     }
     body:hover, html:hover {
-        background-color: #00796B; /* Darker ocean blue on hover */
+        /* Darker ocean blue on hover */
     }
     .center-content {
         text-align: center;
@@ -38,87 +38,56 @@
         margin-top: 20px;
     }
     .custom-input {
-        display: inline-block;
-        position: relative;
-        width: 220px;
-        height: 40px;
-        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px; /* Increase margin from top */
     }
     .custom-input input {
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        border-radius: 5px;
+        height: 40px;
+        padding: 0 15px;
+        border-radius: 10px; /* Updated border radius */
         border: 1px solid #ccc;
         background-color: #f8f8f8;
         box-sizing: border-box;
         font-size: 1em;
+        text-align: center;
+        flex-grow: 1; /* Allow input to grow */
+        margin-right: 20px; /* Add right margin */
     }
-    .custom-input input:focus {
-        outline: none;
-        border-color: #6a0dad;
-    }
-    .custom-input label {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
-        color: #999;
-        font-size: 0.9em;
-        pointer-events: none;
-        transition: 0.2s ease-out;
-    }
-    .custom-input input:focus + label,
-    .custom-input input:not(:placeholder-shown) + label {
-        top: 10px;
-        font-size: 0.8em;
-        color: #6a0dad;
-    }
-    /* Button styles */
     .gender-button {
-        margin: 10px;
-        background-color: #6a0dad; /* Purple background */
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 10px;
-        cursor: pointer;
+        height: 40px;
+        padding: 0 20px;
+        border-radius: 10px; /* Updated border radius */
         font-size: 1.1em;
-        transition: background-color 0.3s ease; /* Smooth transition for color change */
+        cursor: pointer;
+        background-color: #cc7722; /* Button color */
+        color: white;
+        border: 1px solid white; /* White border */
+        transition: background-color 0.3s ease;
     }
     .gender-button:hover {
-        background-color: #7b1fa2; /* Slightly lighter purple on hover */
+        background-color: #aa5511; /* Darker button color on hover */
     }
-    .on-button-hover-gay:hover {
-        background-color: #00FFFF; /* Aqua color */
+    .small-text {
+        margin-top: 10px;
     }
-    .on-button-hover-lesbian:hover {
-        background-color: #FFB6C1; /* Pastel pink color */
-    }
-    .on-button-hover-other:hover {
-        background-color: #FFDB58; /* Mustard yellow color */
+    .restriction-text {
+        color: white;
+        font-size: 0.8em;
     }
 </style>
 <div class="center-content">
-    <h1>Cornoscope</h1>
-    <p class="description"><em>Discover astro men's traits while exploring astrology and relationships.</em></p>
+    <h1><b>Welcome to the world of <br>Astrology and Guys</b></h1>
+    <p class="description"><em>Enter your date of birth to start exploring.</em></p>
     <form action="{% url 'index' %}" method="POST">
         {% csrf_token %}
-        <div>
-            <p class="important-note">Date is important to determine your Sign</p>
-            <div class="custom-input">
-                <input type="text" id="dob" name="dob" placeholder=" " required>
-                <label for="dob">Enter your date of birth (DD/MM/YYYY)</label>
-            </div>
-        </div>
-        <div>
-            <label for="gender">Select your gender:</label>
-            <div>
-                <button type="submit" class="gender-button on-button-hover-gay" name="gender" value="1">Enter as Gay Man</button>
-                <button type="submit" class="gender-button on-button-hover-lesbian" name="gender" value="2">Enter as Lesbian</button>
-                <button type="submit" class="gender-button on-button-hover-other" name="gender" value="0">Enter as Other</button>
-            </div>
+        <div class="custom-input">
+            <input type="text" id="dob" name="dob" placeholder="(DD/MM/YYYY)" required>
+            <button type="submit" class="gender-button on-button-hover-gay" name="gender" value="1">Enter</button>
         </div>
     </form>
+    <div class="small-text">
+        <small class="restriction-text">If you are not 18+, access will be restricted.</small>
+    </div>
 </div>
 {% endblock %}
