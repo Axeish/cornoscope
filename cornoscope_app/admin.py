@@ -27,18 +27,23 @@ class HoroscopeAdmin(admin.ModelAdmin):
             if form.is_valid():
                 uploaded_file = request.FILES['xml_file']
                 if uploaded_file.name.endswith('.xml'):
-                    horoscope_data = parse_xml_file(uploaded_file)
-                    for data in horoscope_data:
-                        Horoscope.objects.update_or_create(
-                            sign=data['sign'],
-                            defaults={
-                                'description': data['description'],
-                                'start_date': data['start_date'],
-                                'end_date': data['end_date'],
-                            }
-                        )
-                    self.message_user(request, "Horoscope data imported successfully.")
-                    return redirect("..")
+                    try:
+                        horoscope_data = parse_xml_file(uploaded_file)
+                        for data in horoscope_data:
+                            Horoscope.objects.update_or_create(
+                                sign=data['sign'],
+                                defaults={
+                                    'description': data['description'],
+                                    'start_date': data['start_date'],
+                                    'end_date': data['end_date'],
+                                    'element': data['element'],
+                                    'color': data['color'],
+                                }
+                            )
+                        self.message_user(request, "Horoscope data imported successfully.")
+                        return redirect("..")
+                    except ValueError as e:
+                        self.message_user(request, f"Error in XML file: {e}")
                 else:
                     self.message_user(request, "Please upload a valid XML file.")
         else:

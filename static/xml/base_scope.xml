@@ -3,72 +3,364 @@
         <name>Aries</name>
         <start_date>March 21</start_date>
         <end_date>April 19</end_date>
+        <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
         <description>Dynamic and competitive, Aries are born leaders with a passion for action.</description>
     </sign>
     <sign>
         <name>Taurus</name>
         <start_date>April 20</start_date>
         <end_date>May 20</end_date>
+        <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
         <description>Taurus are known for their stability, loyalty, and love for comfort and beauty.</description>
     </sign>
     <sign>
         <name>Gemini</name>
         <start_date>May 21</start_date>
         <end_date>June 20</end_date>
+        <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
+   
         <description>Gemini are versatile and curious individuals with a love for communication and learning.</description>
     </sign>
     <sign>
         <name>Cancer</name>
         <start_date>June 21</start_date>
         <end_date>July 22</end_date>
+        <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
+
         <description>Cancers are intuitive and nurturing, often deeply connected to emotions and family.</description>
     </sign>
     <sign>
         <name>Leo</name>
         <start_date>July 23</start_date>
         <end_date>August 22</end_date>
+                <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
         <description>Leos are confident and passionate leaders with a flair for drama and creativity.</description>
     </sign>
     <sign>
         <name>Virgo</name>
         <start_date>August 23</start_date>
         <end_date>September 22</end_date>
+        <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
         <description>Virgos are practical and detail-oriented perfectionists, often focused on service and improvement.</description>
     </sign>
     <sign>
         <name>Libra</name>
         <start_date>September 23</start_date>
         <end_date>October 22</end_date>
+                <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
+        <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
+       
         <description>Libras are diplomatic and harmonious, valuing fairness, partnerships, and aesthetics.</description>
     </sign>
     <sign>
         <name>Scorpio</name>
         <start_date>October 23</start_date>
         <end_date>November 21</end_date>
+                <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
         <description>Scorpios are intense and passionate, known for their deep emotions, determination, and mystery.</description>
     </sign>
     <sign>
         <name>Sagittarius</name>
         <start_date>November 22</start_date>
         <end_date>December 21</end_date>
+                <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
+   
         <description>Sagittarians are adventurous and optimistic, with a love for freedom, travel, and philosophical pursuits.</description>
     </sign>
     <sign>
         <name>Capricorn</name>
         <start_date>December 22</start_date>
-        <end_date>January 19</end_date>
+        <end_date>January 19</end_date>        <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
+
         <description>Capricorns are ambitious and disciplined, driven by success, stability, and practicality.</description>
     </sign>
     <sign>
         <name>Aquarius</name>
         <start_date>January 20</start_date>
         <end_date>February 18</end_date>
+                <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
+        <description>Dynamic and competitive, Aries are born leaders with a passion for action.</description>
         <description>Aquarians are innovative and independent thinkers, often focused on humanitarian causes and intellectual pursuits.</description>
     </sign>
     <sign>
         <name>Pisces</name>
         <start_date>February 19</start_date>
         <end_date>March 20</end_date>
+                <element>Air</element>
+        <color>Yellow</color>
+        <lucky_number>5</lucky_number>
+        <traits>
+            <trait id="1" type="positive">
+                <name>Optimistic</name>
+                <description>Always looks for the bright side of things.</description>
+            </trait>
+            <trait id="2" type="positive">
+                <name>Friendly</name>
+                <description>Easily makes friends and enjoys social interactions.</description>
+            </trait>
+            <trait id="3" type="negative">
+                <name>Pessimistic</name>
+                <description>Tends to focus on the negatives rather than positives.</description>
+            </trait>
+            <trait id="4" type="negative">
+                <name>Stubborn</name>
+                <description>Reluctant to change opinions or viewpoints.</description>
+            </trait>
+
+        </traits>
+        <description>Dynamic and competitive, Aries are born leaders with a passion for action.</description>
         <description>Pisces are compassionate and imaginative, deeply connected to emotions, spirituality, and creativity.</description>
     </sign>
 </zodiac_signs>

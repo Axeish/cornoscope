@@ -1,26 +1,114 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Choose Your Zodiac Sign{% endblock %}
+{% block title %}Welcome to Cornoscope{% endblock %}
 
 {% block content %}
-<h2 class="text-center">Cornoscope</h2>
-<div class="center-content">
-    <h1>Welcome {{ horoscope }} {% if request.session.gender == '1' %}Guy{% elif request.session.gender == '2' %}Lady{% else %} {% endif %}</h1>
-    <p>Born on: {{ request.session.date_of_birth }}</p>
-<!--    <p>Your gender: {% if request.session.gender == '1' %}Gay Man{% elif request.session.gender == '2' %}Lesbian{% else %}Other{% endif %}</p>-->
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #d69d0e; /* Updated background color */
+    }
+    .center-content {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .center-content h1 {
+        color: white;
+    }
+    .center-content p {
+        color: white;
+    }
+    .zodiac-banner {
+        text-align: center;
+        margin-bottom: 30px;
+        color: white; /* Set text color to white */
+    }
+    .zodiac-banner img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .zodiac-range {
+        margin-top: 10px;
+        font-size: 1em;
+        color: white; /* Ensure the date range text is also white */
+    }
+    .general-description {
+        text-align: center;
+        margin-top: 20px;
+        color: white;
+        padding: 0 20px; /* Add some padding for better readability */
+    }
+    .horoscope-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        margin: 10px;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+    .card-title {
+        font-size: 1.2em;
+        color: #333;
+    }
+</style>
 
+<div class="zodiac-banner">
+    <h1>{{ horoscope.sign }} Guy</h1>
+    <img src="{% static 'images/' %}{{ horoscope.sign|lower }}.jpg" alt="{{ horoscope.sign }}">
+    <div class="zodiac-range">{{ horoscope.start_date }} - {{ horoscope.end_date }}</div>
 </div>
-<div class="row">
+
+<div class="center-content">
+    <h1>Welcome to Cornoscope</h1>
+    <p>Your date of birth: {{ request.session.date_of_birth }}</p>
+    <p>Your gender: {% if request.session.gender == '1' %}Gay Man{% elif request.session.gender == '2' %}Lesbian{% else %}Other{% endif %}</p>
+    <p>Element: {{ horoscope.element }}</p>
+    <p>Color: {{ horoscope.color }}</p>
+</div>
+
+<div class="general-description">
+    <h2>About {{ horoscope.sign }} Guy</h2>
+    <p>
+        <strong>Personality:</strong> This is a placeholder paragraph for the personality traits of the {{ horoscope.sign }} zodiac sign for a gay man.
+        Typically, this section will provide insights into the key characteristics that define a {{ horoscope.sign }} guy. Stay tuned for more detailed
+        and personalized astrology content designed specifically for you!
+    </p>
+    <p>
+        <strong>Friendship:</strong> This section will discuss the friendship dynamics of a {{ horoscope.sign }} guy. How does he interact with friends,
+        what are his strengths and weaknesses in friendships, and what kind of friends does he attract? Detailed and insightful content will be available soon!
+    </p>
+    <p>
+        <strong>Relationships:</strong> In this section, you'll find information about the relationship tendencies of a {{ horoscope.sign }} guy.
+        What are his romantic inclinations, what does he look for in a partner, and how does he express love and affection? More comprehensive insights coming soon!
+    </p>
+</div>
+
+<div class="horoscope-list">
     {% for horoscope in horoscopes %}
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-            <div class="card">
-                <a href="{% url 'horoscope_detail' sign=horoscope.sign %}">
-                    <img src="{% static 'images/' %}{{ horoscope.sign|lower }}.jpg" class="card-img-top" alt="{{ horoscope.sign }}">
-                </a>
-                <div class="card-body text-center">
-                    <h5 class="card-title">{{ horoscope.sign }} guy</h5>
-                </div>
+        <div class="card">
+            <a href="{% url 'horoscope_detail' sign=horoscope.sign %}">
+                <img src="{% static 'images/' %}{{ horoscope.sign|lower }}.jpg" class="card-img-top" alt="{{ horoscope.sign }}">
+            </a>
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ horoscope.sign }}</h5>
             </div>
         </div>
     {% endfor %}

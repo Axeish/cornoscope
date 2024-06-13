@@ -5,7 +5,8 @@ class Horoscope(models.Model):
     description = models.TextField()
     start_date = models.CharField(max_length=5)  # CharField for day and month (e.g., "MM-DD")
     end_date = models.CharField(max_length=5)
-
+    element = models.CharField(max_length=20, default='Unknown')
+    color = models.CharField(max_length=20, default='Unknown')
     def __str__(self):
         return self.sign
 class Compatibility(models.Model):
