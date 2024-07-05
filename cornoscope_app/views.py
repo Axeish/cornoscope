@@ -15,7 +15,10 @@ class SetDateOfBirthView(View):
             dob = datetime.strptime(dob_str, '%d/%m/%Y').date()
             today = datetime.today().date()
             age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+            print(dob_str)
+            print(age)
             if age < 18:
+                print("HERE")
                 return redirect('too_young')
             request.session['date_of_birth'] = dob_str
             request.session['gender'] = gender

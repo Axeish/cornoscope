@@ -38,6 +38,8 @@ class HoroscopeAdmin(admin.ModelAdmin):
                                     'end_date': data['end_date'],
                                     'element': data['element'],
                                     'color': data['color'],
+                                    'positive_traits': data['positive_traits'],
+                                    'negative_traits': data['negative_traits'],
                                 }
                             )
                         self.message_user(request, "Horoscope data imported successfully.")
